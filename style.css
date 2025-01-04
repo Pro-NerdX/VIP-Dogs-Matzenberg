@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+    /* Light Mode (lm) colors */
+    --lm-bg-col: gray;
+    --lm-light-bg-col : rgb(184, 184, 184);
+    --lm-container-bg-col: white;
+    --lm-secondary-col: rgb(0, 214, 104);
+    --lm-ternary-col: rgb(83, 41, 27);
+
+    /* Dark Mode (dm) colors */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--lm-bg-col);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+}
+
+.container {
+    width: 95%;
+    background-color: var(--lm-container-bg-col);
+    padding: 30px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1); /* TODO: Consider glow from text-shaddow */
+    border-radius: 20px;
+}
+
+/* TABS */
+.tab-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid var(--lm-light-bg-col);
+    position: relative;
+}
+.tab-box .tab-btn {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--lm-bg-col);
+    background: none;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+}
+.tab-box .tab-btn.active {
+    color: var(--lm-secondary-col);
+}
+
+.line {
+    position: absolute;
+    top: 62px;
+    left: 25px;
+    width: 90px;
+    height: 5px;
+    background-color: var(--lm-secondary-col);
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}    
+
+/* CONTENT */
+.content-box {
+    padding: 20px;
+}
+.content-box .content {
+    display: none;
+    animation: moving 0.5s ease;
+}
+@keyframes moving {
+    from {
+        transform: translate(50px);
+        opacity: 0;
+    } to {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+.content-box .content.active {
+    display: block;
+}
+.content-box .content h2 {
+    margin-bottom: 10px;
+}
+
+
+
+h2 {
+    font-size: 3rem;
+}
+.h2-wrapper {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+/* Home */
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.home-con {
+    margin: 0 10px;
+    text-align: center;
+    padding: 20px;
+}
+.home-con:first-child {
+    flex: 0 0 35%;
+}
+.home-con:last-child {
+    flex: 0 0 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-con p {
+    font-size: 1.5rem;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.paragraph-header {
+    text-decoration: underline;
+    font-size: 2rem !important;
+}
+.img-wrapper {
+    width: 100%;
+    max-width: 1000px;
+}
+.img-wrapper img {
+    border-radius: 1em;
+}
+
+
+
+/* Über uns */
+.trainer-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.aboutus-con {
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+.aboutus-con img {
+    border-radius: 0.5em;
+}
+.aboutus-con:first-child {
+    flex: 0 0 40%;
+}
+.aboutus-con:last-child {
+    flex: 0 0 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainer1, .trainer2, .trainer3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+.trainer1 {
+    background-color: rgb(238, 238, 238);
+}
+.trainer2 {
+    background-color: rgb(245, 245, 245);
+}
+.trainer3 {
+    background-color: rgb(238, 238, 238);
+}
+.trainer-text {
+    flex: 0 0 55%;
+    text-align: center;
+}
+.trainer-text h3 {
+    font-size: 2rem;
+    padding: 5%;
+}
+.trainer-text ul {
+    list-style-type: none;
+}
+.trainer-text ul li {
+    padding: 1%;
+    font-size: 1.25rem;
+}
+.trainer-img {
+    flex: 0 0 45%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Trainingsbereiche */
+.tb-wrapper {
+    font-size: 1.5rem;
+}
+.tb-caption {
+    font-size: 2rem;
+}
+.tb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: rgb(238, 238, 238);
+}
+.tb-table ul {
+    list-style-type: none;
+}
+.tb-table ul li {
+    padding: 1.5%;
+    margin-right: 1%;
+    margin-left: 1%;
+    font-weight: bold;
+}
+.tb-img {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* Beratungen */
+.beratungen-head {
+    font-size: 1.75rem;
+}
+
+.beratungen {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.beratungen-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+}
+.beratungen-text ul {
+    padding: 5%;
+    font-size: 1.5rem;
+}
+.beratungen-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.beratungen-img img {
+    width: 40%;
+    height: 100%;
+    object-fit: cover;
+    padding-top: 5%;
+}
+.beratungen-right {
+    width: 25%;
+    align-items: center;
+    padding-right: 5%;
+}
+.beratungen-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+
+/* News / Termine / Seminare */
+.tz-caption {
+    font-size: 2rem;
+}
+.trainingszeiten {
+    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.trainingszeiten div ul {
+    padding-top: 4%;
+    font-size: 1.5rem;
+}
+.trainingszeiten div p {
+    padding-top: 5%;
+}
+
+
+
+/* Kontakt */
+.contact-table {
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+}
+.contact-table ul {
+    list-style-type: none;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+.map {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+    width: 100%;
+}
+.map iframe {
+    width: 80%;
+}
+
+
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
