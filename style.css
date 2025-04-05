@@ -355,14 +355,14 @@ img {
 
 #orientation-notification {
     position: fixed;
-    top: 20px;
+    top: 40px;
     left: 50%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 1);
     color: white;
     text-align: center;
-    padding: 15px;
-    font-size: 16px;
+    padding: 18px;
+    font-size: 20px;
     border-radius: 8px;
     z-index: 1000;
 }
