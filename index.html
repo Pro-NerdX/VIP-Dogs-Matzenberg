@@ -257,8 +257,32 @@
             </div>
         </div>
     </div>
+    <div class="hidden" id="orientation-notification">
+        <p>Wenn sie ein mobiles Endgerät benutzen:</p>
+        <p>Für ein besseres Erlebnis empfehlen wir, ihr Smartphone horizontal zu halten.</p>
+        <button id="close-notification">OK</button>
+    </div>
 
     <script>
+        /* Notification for vertical screens */
+        function checkOrientation() {
+            const notification = document.getElementById('orientation-notification');
+
+            if (window.innerWidth < window.innerHeight) {
+                notification.classList.remove('hidden');
+            } else {
+                notification.classList.add('hidden');
+            }
+        }
+
+        /* Close notification on OK */
+        document.getElementById('close-notification').addEventListener('click', function () {
+            const notification = document.getElementById('orientation-notification');
+            notification.classList.add('hidden');
+        });
+
+        window.onload = checkOrientation;
+
         const tabs = document.querySelectorAll(".tab-btn");
         const all_content = document.querySelectorAll(".content");
 
